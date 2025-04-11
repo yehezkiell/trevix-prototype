@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Custom theme colors */
+    --theme-primary: 221.2 83.2% 53.3%;
+    --theme-primary-light: 221.2 83.2% 63.3%;
+    --theme-primary-dark: 221.2 83.2% 43.3%;
+    --theme-secondary: 210 40% 96.1%;
+    --theme-accent: 217.2 91.2% 59.8%;
+    --theme-accent-light: 217.2 91.2% 69.8%;
+    --theme-accent-dark: 217.2 91.2% 49.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 0 0% 98%;
+    --sidebar-primary-foreground: 240 5.9% 10%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Custom theme colors for dark mode */
+    --theme-primary: 217.2 91.2% 59.8%;
+    --theme-primary-light: 217.2 91.2% 69.8%;
+    --theme-primary-dark: 217.2 91.2% 49.8%;
+    --theme-secondary: 217.2 32.6% 17.5%;
+    --theme-accent: 210 40% 98%;
+    --theme-accent-light: 210 40% 90%;
+    --theme-accent-dark: 210 40% 80%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.theme-blue {
+  --card-gradient-from: hsl(217.2, 32.6%, 12%);
+  --card-gradient-to: hsl(217.2, 32.6%, 17.5%);
+  --card-icon-bg: hsl(217.2, 32.6%, 22%);
+  --card-icon-color: hsl(217.2, 91.2%, 59.8%);
+  --card-accent-color: hsl(217.2, 91.2%, 59.8%);
+}
+
+.light .theme-blue {
+  --card-gradient-from: hsl(217.2, 91.2%, 95%);
+  --card-gradient-to: hsl(217.2, 91.2%, 90%);
+  --card-icon-bg: hsl(217.2, 91.2%, 90%);
+  --card-icon-color: hsl(217.2, 91.2%, 59.8%);
+  --card-accent-color: hsl(217.2, 91.2%, 59.8%);
+}
+
+.theme-green {
+  --card-gradient-from: hsl(142, 32.6%, 12%);
+  --card-gradient-to: hsl(142, 32.6%, 17.5%);
+  --card-icon-bg: hsl(142, 32.6%, 22%);
+  --card-icon-color: hsl(142, 76%, 36%);
+  --card-accent-color: hsl(142, 76%, 36%);
+}
+
+.light .theme-green {
+  --card-gradient-from: hsl(142, 76%, 95%);
+  --card-gradient-to: hsl(142, 76%, 90%);
+  --card-icon-bg: hsl(142, 76%, 90%);
+  --card-icon-color: hsl(142, 76%, 36%);
+  --card-accent-color: hsl(142, 76%, 36%);
+}
+
+.theme-amber {
+  --card-gradient-from: hsl(45, 32.6%, 12%);
+  --card-gradient-to: hsl(45, 32.6%, 17.5%);
+  --card-icon-bg: hsl(45, 32.6%, 22%);
+  --card-icon-color: hsl(45, 93%, 47%);
+  --card-accent-color: hsl(45, 93%, 47%);
+}
+
+.light .theme-amber {
+  --card-gradient-from: hsl(45, 93%, 95%);
+  --card-gradient-to: hsl(45, 93%, 90%);
+  --card-icon-bg: hsl(45, 93%, 90%);
+  --card-icon-color: hsl(45, 93%, 47%);
+  --card-accent-color: hsl(45, 93%, 47%);
+}
+
+.theme-purple {
+  --card-gradient-from: hsl(262, 32.6%, 12%);
+  --card-gradient-to: hsl(262, 32.6%, 17.5%);
+  --card-icon-bg: hsl(262, 32.6%, 22%);
+  --card-icon-color: hsl(262, 83%, 58%);
+  --card-accent-color: hsl(262, 83%, 58%);
+}
+
+.light .theme-purple {
+  --card-gradient-from: hsl(262, 83%, 95%);
+  --card-gradient-to: hsl(262, 83%, 90%);
+  --card-icon-bg: hsl(262, 83%, 90%);
+  --card-icon-color: hsl(262, 83%, 58%);
+  --card-accent-color: hsl(262, 83%, 58%);
+}
+
